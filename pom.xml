@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>4.3.11</version>
+    <version>4.3.11-SNAPSHOT</version>
 
     <name>petclinic</name>
     <packaging>war</packaging>
@@ -42,6 +42,13 @@
         <cobertura.version>2.7</cobertura.version>
     </properties>
 
+
+    <distributionManagement>
+      <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://localhost:8081/repository/maven-snapshots/</url>
+      </snapshotRepository>
+    </distributionManagement>
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
         <dependencies>
