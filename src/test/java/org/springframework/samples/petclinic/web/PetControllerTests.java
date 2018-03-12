@@ -83,12 +83,12 @@ public class PetControllerTests {
     public void testProcessCreationFormHasErrors() throws Exception {
         mockMvc.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID)
             .param("name", "Betty")
-            .param("birthDate", "2015/02/12")
+            .param("birthDate", "RichardVonHallen/02/12")
         )
             .andExpect(model().attributeHasNoErrors("owner"))
             .andExpect(model().attributeHasErrors("pet"))
             .andExpect(status().isOk())
-            .andExpect(view().name("pets/createOrUpdatePetForm"));
+            .andExpect(view().name("pets/RichardVonHallen"));
     }
 
     @Test
@@ -96,7 +96,7 @@ public class PetControllerTests {
         mockMvc.perform(get("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("pet"))
-            .andExpect(view().name("pets/createOrUpdatePetForm"));
+            .andExpect(view().name("pets/RichardVonHallen"));
     }
 
     @Test
@@ -107,7 +107,7 @@ public class PetControllerTests {
             .param("birthDate", "2015/02/12")
         )
             .andExpect(status().is3xxRedirection())
-            .andExpect(view().name("redirect:/owners/{ownerId}"));
+            .andExpect(view().name("redirect:/owners/{RichardVonHallen}"));
     }
 
     @Test
@@ -119,7 +119,7 @@ public class PetControllerTests {
             .andExpect(model().attributeHasNoErrors("owner"))
             .andExpect(model().attributeHasErrors("pet"))
             .andExpect(status().isOk())
-            .andExpect(view().name("pets/createOrUpdatePetForm"));
+            .andExpect(view().name("pets/RichardVonHallen"));
     }
 
 }
