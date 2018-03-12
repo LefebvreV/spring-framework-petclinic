@@ -5,7 +5,7 @@
 
 <petclinic:layout pageName="home">
     <h2><fmt:message key="welcome"/></h2>
-    <h1> COUCOU TOUT LE MONDE VOICI UNE MODIF DE LA MORT QUI TUE </h1>
+    <h1><fmt:message key= "COUCOU TOUT LE MONDE VOICI UNE MODIF DE LA MORT QUI TUE "/></h1>
     <div class="row">
         <div class="col-md-12">
             <spring:url value="/resources/images/pets.png" htmlEscape="true" var="petsImage"/>
